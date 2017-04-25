@@ -6,7 +6,7 @@ use MyApplication\controller\PessoaController;
 /**
  * PessoaControllerTest
  * 
- * Execmplo de teste unitário utilizando PHPUnit
+ * Classe de teste para testar o controller PessoaController
  * 
  * Para executar basta executar o comando no diretório raiz:
  * ./vendor/bin/phpunit
@@ -24,10 +24,12 @@ class PessoaControllerTest extends \PHPUnit_Framework_TestCase
     
     /**
      * PessoaControllerTest::__construct
+     * 
+     * Criando instancia do objeto pessoa controller para teste
      */
     public function __construct() 
     {
-        // Crio um mock da minha classe Usuário com o método teste.
+        // Crio um mock da minha classe PessoaModel.
         $pessoaModel = $this->getMockBuilder('MyApplication\model\PessoaModel')
             ->disableOriginalConstructor()
             ->getMock();
@@ -39,7 +41,7 @@ class PessoaControllerTest extends \PHPUnit_Framework_TestCase
     /**
      * PessoaControllerTest::testSalvar
      * 
-     * Testa método salvar
+     * Testando método salvar
      * 
      * @return void
      */
