@@ -2,4 +2,6 @@
 
 Exemplo de injeção de dependência usando PHP-DI
 
-Requer PHP 5.5 +
+## Dependências
+* Requer PHP 5.5 +
+* PHP-DI (http://php-di.org/doc/getting-started.html)

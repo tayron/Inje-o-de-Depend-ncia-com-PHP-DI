@@ -32,9 +32,9 @@ class PessoaController
         try{
             $this->entidadePessoa->setNome($nomePessoa);
             $this->entidadePessoa->salvar();   
-            echo 'Dados salvo com sucesso';
+            return 'Dados salvo com sucesso';
         } catch (Exception $ex) {
-            echo 'Não foi possível salvar os dados: <br />' . $ex->getMessage();
+            return 'Não foi possível salvar os dados: <br />' . $ex->getMessage();
         }
 
     }
