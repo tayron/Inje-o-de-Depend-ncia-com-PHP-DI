@@ -3,7 +3,7 @@ require_once('bootstrap.php');
 
 $container = DI\ContainerBuilder::buildDevContainer();
 $pessoaController = $container->get('MyApplication\controller\PessoaController');
-$pessoaController->salvar('Pedro', 'asdf', 'asdfad');
+$pessoaController->salvar('Pedro');
 
 //use MyApplication\model\Model;
 //use MyApplication\model\PessoaModel;
