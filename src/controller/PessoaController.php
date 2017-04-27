@@ -1,6 +1,6 @@
 <?php
 namespace MyApplication\controller;
-use MyApplication\model\PessoaModel;
+use MyApplication\model\ModelInterface;
 
 /**
  * Description of PessoaController
@@ -11,17 +11,17 @@ class PessoaController
 {
     /**
      *
-     * @var PessoaModel
+     * @var ModelInterface
      */
-    private $entidadePessoa;
+    private $pessoaModel;
     
     /**
      * 
-     * @param PessoaModel $entidadePessoa
+     * @param ModelInterface $pessoaModel
      */
-    public function __construct(PessoaModel $entidadePessoa) 
+    public function __construct(ModelInterface $pessoaModel) 
     {
-        $this->entidadePessoa = $entidadePessoa;
+        $this->pessoaModel = $pessoaModel;
     }
     
     /**
@@ -30,8 +30,8 @@ class PessoaController
     public function salvar($nomePessoa)
     {
         try{
-            $this->entidadePessoa->setNome($nomePessoa);
-            $this->entidadePessoa->salvar();   
+            $this->pessoaModel->setNome($nomePessoa);
+            $this->pessoaModel->salvar();   
             return 'Dados salvo com sucesso';
         } catch (Exception $ex) {
             return 'Não foi possível salvar os dados: <br />' . $ex->getMessage();
